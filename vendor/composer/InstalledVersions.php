@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'e53cd80305bb5242aec7ba86b1e336f05f569cef',
+    'reference' => '9e03fc30f8d7003d55d72ade6b4bc02c0ed45e07',
     'name' => '__root__',
   ),
   'versions' => 
@@ -31,7 +31,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'e53cd80305bb5242aec7ba86b1e336f05f569cef',
+      'reference' => '9e03fc30f8d7003d55d72ade6b4bc02c0ed45e07',
+    ),
+    'components/jquery' => 
+    array (
+      'pretty_version' => '3.6.0',
+      'version' => '3.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6cf38ee1fd04b6adf8e7dda161283aa35be818c3',
     ),
     'datatables/datatables' => 
     array (
@@ -41,6 +50,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '83e59694a105225ff889ddfa0d723a3ab24fda78',
+    ),
+    'enyo/dropzone' => 
+    array (
+      'pretty_version' => 'v5.9.3',
+      'version' => '5.9.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '286b2dc1f1195bd12169e4c9d5f91cfbe46e245f',
     ),
     'monolog/monolog' => 
     array (
@@ -75,6 +93,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '60098ac499d30aa50575b0b7137391c06ef25429',
+    ),
+    'twbs/bootstrap-icons' => 
+    array (
+      'pretty_version' => 'v1.10.5',
+      'version' => '1.10.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '648aa8238437d9da9227f6273cc163ec5841382d',
     ),
     'twitter/bootstrap' => 
     array (
