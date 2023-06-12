@@ -8,5 +8,8 @@
     "enyo/dropzone": "^5.9",
     "select2/select2": "^4.1"
   },
-  "minimum-stability": "beta"
+  "minimum-stability": "beta",
+  "config": {
+    "prefer-stable": true
+  }
 }

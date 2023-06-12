@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '18b3b7524086f4a41cfd69c9cbce5580bd9131c0',
+    'reference' => '1d4c04f550dac000181692ce3f996ea5427047a9',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '18b3b7524086f4a41cfd69c9cbce5580bd9131c0',
+      'reference' => '1d4c04f550dac000181692ce3f996ea5427047a9',
     ),
     'components/jquery' => 
     array (
