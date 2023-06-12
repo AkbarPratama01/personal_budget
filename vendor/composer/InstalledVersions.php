@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9e03fc30f8d7003d55d72ade6b4bc02c0ed45e07',
+    'reference' => '18b3b7524086f4a41cfd69c9cbce5580bd9131c0',
     'name' => '__root__',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9e03fc30f8d7003d55d72ade6b4bc02c0ed45e07',
+      'reference' => '18b3b7524086f4a41cfd69c9cbce5580bd9131c0',
     ),
     'components/jquery' => 
     array (
@@ -84,6 +84,15 @@ private static $installed = array (
       array (
         0 => '1.0.0',
       ),
+    ),
+    'select2/select2' => 
+    array (
+      'pretty_version' => '4.1.0-rc.0',
+      'version' => '4.1.0.0-RC0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9ce61fd297fd2922fe771debea8b24dfd219a49a',
     ),
     'twbs/bootstrap' => 
     array (

@@ -268,6 +268,47 @@
             "install-path": "../psr/log"
         },
         {
+            "name": "select2/select2",
+            "version": "4.1.0-rc.0",
+            "version_normalized": "4.1.0.0-RC0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:select2/select2.git",
+                "reference": "9ce61fd297fd2922fe771debea8b24dfd219a49a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/select2/select2/zipball/9ce61fd297fd2922fe771debea8b24dfd219a49a",
+                "reference": "9ce61fd297fd2922fe771debea8b24dfd219a49a",
+                "shasum": ""
+            },
+            "time": "2021-01-23T04:36:25+00:00",
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/js/select2.js"
+                    ],
+                    "styles": [
+                        "dist/css/select2.css"
+                    ],
+                    "files": [
+                        "dist/js/select2.js",
+                        "dist/js/i18n/*.js",
+                        "dist/css/select2.css"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Select2 is a jQuery based replacement for select boxes.",
+            "homepage": "https://select2.org/",
+            "install-path": "../select2/select2"
+        },
+        {
             "name": "twbs/bootstrap",
             "version": "v5.3.0",
             "version_normalized": "5.3.0.0",
