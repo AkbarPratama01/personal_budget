@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '1d4c04f550dac000181692ce3f996ea5427047a9',
+    'reference' => '956385a4ee802cf3563d45822062fd24af16207c',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '1d4c04f550dac000181692ce3f996ea5427047a9',
+      'reference' => '956385a4ee802cf3563d45822062fd24af16207c',
     ),
     'components/jquery' => 
     array (
@@ -46,6 +46,15 @@
       array (
       ),
       'reference' => '286b2dc1f1195bd12169e4c9d5f91cfbe46e245f',
+    ),
+    'mervick/material-design-icons' => 
+    array (
+      'pretty_version' => '2.2.0',
+      'version' => '2.2.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '635435c8d3df3a6da3241648caf8a65d1c07cc1a',
     ),
     'monolog/monolog' => 
     array (

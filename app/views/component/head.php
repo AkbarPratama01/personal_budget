@@ -4,7 +4,6 @@
 
 
 <!-- CSS -->
-
 <!-- Custom CSS -->
 <link rel="stylesheet" href="../../public/css/style.css">
 <!-- Favicon icon-->
@@ -14,3 +13,6 @@
 <link href="../../vendor/twbs/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <!-- Dropzone -->
 <link rel="stylesheet" href="../../vendor/enyo/dropzone/dist/dropzone.css">
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../../public/css/theme.css">
