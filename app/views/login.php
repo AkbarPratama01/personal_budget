@@ -19,16 +19,11 @@
         <div class="card smooth-shadow-md">
           <!-- Card body -->
           <div class="card-body p-6">
-            <div class="mb-4">
-              <a href="../index.html"><img src="../../public/images/brand/logo/logo-primary.svg" class="mb-2"
-                  alt=""></a>
-              <p class="mb-6">Please enter your user information.</p>
-            </div>
             <!-- Form -->
-            <form>
+            <form id="form-sign-in">
               <!-- Username -->
               <div class="mb-3">
-                <label for="email" class="form-label">Username or email</label>
+                <label for="email" class="form-label">email</label>
                 <input type="email" id="email" class="form-control" name="email" placeholder="Email address here"
                   required="">
               </div>
@@ -38,20 +33,10 @@
                 <input type="password" id="password" class="form-control" name="password" placeholder="**************"
                   required="">
               </div>
-              <!-- Checkbox -->
-              <div class="d-lg-flex justify-content-between align-items-center
-                  mb-4">
-                <div class="form-check custom-checkbox">
-                  <input type="checkbox" class="form-check-input" id="rememberme">
-                  <label class="form-check-label" for="rememberme">Remember
-                    me</label>
-                </div>
-
-              </div>
               <div>
                 <!-- Button -->
                 <div class="d-grid">
-                  <button type="submit" class="btn btn-primary">Sign
+                  <button type="button" id="btn-sign-in" class="btn btn-primary">Sign
                     in</button>
                 </div>
 
@@ -77,6 +62,57 @@
   </div>
   <!-- Scripts -->
   <?php include "component/js.php"; ?>
+  <script>
+  var btn_login = document.getElementById("btn-sign-in");
+
+  btn_login.onclick = function() {
+
+    //data Login
+    const data_login = [
+      document.querySelector('input[name="email"]'),
+      document.querySelector('input[name="password"]')
+    ];
+
+    let isInputEmpty = false;
+
+    for (let i = 0; i < data_login.length; i++) {
+      if (!data_login[i].value) {
+        isInputEmpty = true;
+        break;
+      }
+    }
+
+    if (isInputEmpty) {
+      alert('Username atau password masih kosong');
+    } else {
+      var username = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      $.ajax({
+        url: "../controllers/LoginController.php",
+        type: "post",
+        data: {
+          username: username,
+          password: password
+        },
+        success: function(result) {
+          if (result == 'success') {
+            window.location.href = "index.php";
+          } else {
+            alert("user tidak ditemukan");
+            // Access the form element
+            var form = document.getElementById('form-sign-in');
+
+            // Reset the form
+            form.reset();
+          }
+        }
+      })
+    }
+
+
+  }
+  </script>
 </body>
 
 </html>
