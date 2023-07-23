@@ -16,3 +16,6 @@
 
 <!-- Theme CSS -->
 <link rel="stylesheet" href="../../public/css/theme.css">
+
+<!-- CSS file -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-toast-plugin@1.3.2/dist/jquery.toast.min.css">
