@@ -1,6 +1,13 @@
 <?php
 session_start();
-// var_dump($_SESSION);
+if (isset($_SESSION['user_id'])) {
+  $user_id = $_SESSION['user_id'];
+  $nama_user = $_SESSION['name'];
+} else {
+  $user_id = '';
+  $nama_user = '';
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +21,7 @@ session_start();
 </head>
 
 
-<body class="bg-light">
+<body class="bg-light" onload="showDashboard('<?= $user_id; ?>')">
   <div id="db-wrapper">
     <!-- navbar vertical -->
     <?php include "component/navbar-vertical.php"; ?>
@@ -32,11 +39,37 @@ session_start();
                 <div class="mb-2 mb-lg-0">
                   <h3 class="mb-0  text-white">Ringkasan Keuangan</h3>
                 </div>
-
+                <div>
+                  <button href="#" class="btn btn-white"><i class="bi bi-plus-circle"></i> Tambah Transaksi</button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-12 col-12 mt-6">
+          <div class="col-xl-4 col-lg-4 col-md-12 col-12 mt-6">
+            <!-- card -->
+            <div class="card ">
+              <!-- card body -->
+              <div class="card-body">
+                <!-- heading -->
+                <div class="d-flex justify-content-between align-items-center
+                    mb-3">
+                  <div>
+                    <h4 class="mb-0">Dompet</h4>
+                  </div>
+                  <div class="icon-shape icon-md bg-light-primary text-primary
+                      rounded-2">
+                    <i class="bi bi-wallet-fill"></i>
+                  </div>
+                </div>
+                <!-- project number -->
+                <div>
+                  <h1 class="fw-bold" id="total-pemasukkan">2</h1>
+                  <p class="mb-0"><span class="text-dark me-2" id="total-transaksi-pemasukkan">30</span>Transaksi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-12 col-12 mt-6">
             <!-- card -->
             <div class="card ">
               <!-- card body -->
@@ -54,13 +87,13 @@ session_start();
                 </div>
                 <!-- project number -->
                 <div>
-                  <h1 class="fw-bold">5.000.000</h1>
-                  <p class="mb-0"><span class="text-dark me-2">2</span>Transaksi</p>
+                  <h1 class="fw-bold" id="total-pemasukkan">5.000.000</h1>
+                  <p class="mb-0"><span class="text-dark me-2" id="total-transaksi-pemasukkan">2</span>Transaksi</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-12 col-12 mt-6">
+          <div class="col-xl-4 col-lg-4 col-md-12 col-12 mt-6">
             <!-- card -->
             <div class="card ">
               <!-- card body -->
@@ -73,13 +106,13 @@ session_start();
                   </div>
                   <div class="icon-shape icon-md bg-light-primary text-primary
                       rounded-2">
-                    <i class="bi bi-wallet fs-4"></i>
+                    <i class="bi bi-wallet2"></i>
                   </div>
                 </div>
                 <!-- project number -->
                 <div>
-                  <h1 class="fw-bold">3.200.000</h1>
-                  <p class="mb-0"><span class="text-dark me-2">28</span>Transaksi</p>
+                  <h1 class="fw-bold" id="total-pengeluaran">3.200.000</h1>
+                  <p class="mb-0"><span class="text-dark me-2" id="total-transaksi-pengeluaran">28</span>Transaksi</p>
                 </div>
               </div>
             </div>
@@ -89,7 +122,15 @@ session_start();
               <div class="card-header">
                 <h3 class="card-title">Analisa Keuangan</h3>
               </div>
-              <div class="card-body"></div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div>
+                      <canvas id="myChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-4 col-12 mt-6">
@@ -104,6 +145,9 @@ session_start();
                       <tr>
                         <td class="px-3">
                           <div class="row">
+                            <div class="col-md-12">
+                              <h6>13 Jul 2023</h6>
+                            </div>
                             <div class="col-md-7 col-6">
                               <h4 class="fs-4">Bayar Kuliah</h4>
                             </div>
@@ -177,6 +221,28 @@ session_start();
   <!-- Scripts -->
   <?php include "component/js.php"; ?>
 
+  <script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+  </script>
 
 
 </body>

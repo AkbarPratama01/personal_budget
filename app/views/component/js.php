@@ -8,3 +8,5 @@
 <script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Dropzone -->
 <script src="../../vendor/enyo/dropzone/dist/dropzone.js"></script>
+<!-- CDN Chart JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

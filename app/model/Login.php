@@ -25,10 +25,16 @@ class login{
       $_SESSION['user_id'] = $row['user_id'];
       $_SESSION['name'] = $row['name'];
 
+      $this->close();
+
       return true;
     } else {
       return false;
     }
+  }
+  private function close()
+  {
+      $this->conn->close();
   }
 }
 

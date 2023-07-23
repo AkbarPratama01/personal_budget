@@ -26,23 +26,25 @@
          <div id="navPages" class="collapse show" data-bs-parent="#sideNavbar">
            <ul class="nav flex-column">
              <li class="nav-item">
-               <a class="nav-link" href="#">
+               <a class="nav-link" href="wallet.php">
+                 Dompet
+               </a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="incomes.php">
                  Pemasukkan
                </a>
              </li>
              <li class="nav-item">
-               <a class="nav-link has-arrow  " href="#">
+               <a class="nav-link" href="expenses.php">
                  Pengeluaran
                </a>
-
              </li>
-
-
-             <li class="nav-item">
-               <a class="nav-link" href="#">
+             <!-- <li class="nav-item">
+               <a class="nav-link" href="report.php">
                  Laporan
                </a>
-             </li>
+             </li> -->
            </ul>
          </div>
 
