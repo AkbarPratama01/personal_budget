@@ -23,7 +23,7 @@
             <form id="form-sign-in">
               <!-- Username -->
               <div class="mb-3">
-                <label for="email" class="form-label">email</label>
+                <label for="email" class="form-label">Email</label>
                 <input type="email" id="email" class="form-control" name="email" placeholder="Email address here"
                   required="">
               </div>
@@ -42,7 +42,7 @@
 
                 <div class="d-md-flex justify-content-between mt-4">
                   <div class="mb-2 mb-md-0">
-                    <a href="sign-up.html" class="fs-5">Create An
+                    <a href="register.php" class="fs-5">Create An
                       Account </a>
                   </div>
                   <div>
@@ -52,8 +52,6 @@
 
                 </div>
               </div>
-
-
             </form>
           </div>
         </div>
@@ -109,8 +107,6 @@
         }
       })
     }
-
-
   }
   </script>
 </body>

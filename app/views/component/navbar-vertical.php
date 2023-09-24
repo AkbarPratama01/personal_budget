@@ -31,6 +31,11 @@
                </a>
              </li>
              <li class="nav-item">
+               <a class="nav-link" href="wishlist.php">
+                 Wishlist
+               </a>
+             </li>
+             <li class="nav-item">
                <a class="nav-link" href="incomes.php">
                  Pemasukkan
                </a>
@@ -40,11 +45,16 @@
                  Pengeluaran
                </a>
              </li>
-             <!-- <li class="nav-item">
+             <li class="nav-item">
                <a class="nav-link" href="report.php">
                  Laporan
                </a>
-             </li> -->
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="profile.php">
+                 Profile
+               </a>
+             </li>
            </ul>
          </div>
 

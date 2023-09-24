@@ -17,8 +17,8 @@
 
 
             <div class="lh-1 ">
-              <h5 class="mb-1"> John E. Grainger</h5>
-              <a href="#" class="text-inherit fs-6">View my profile</a>
+              <h5 class="mb-1"> <?= $nama_user; ?></h5>
+              <!-- <a href="#" class="text-inherit fs-6">View my profile</a> -->
             </div>
             <div class=" dropdown-divider mt-3 mb-2"></div>
           </div>
@@ -31,19 +31,11 @@
                 Profile
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a class="dropdown-item" href="#">
                 <i class="me-2 icon-xxs dropdown-item-icon" data-feather="activity"></i>Activity Log
               </a>
-
-
-            </li>
-
-            <li>
-              <a class="dropdown-item text-primary" href="#">
-                <i class="me-2 icon-xxs text-primary dropdown-item-icon" data-feather="star"></i>Go Pro
-              </a>
-            </li>
+            </li> -->
             <li>
               <a class="dropdown-item" href="#">
                 <i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>Account Settings
