@@ -21,7 +21,7 @@ if (isset($_SESSION['user_id'])) {
 </head>
 
 
-<body class="bg-light">
+<body class="bg-light" onload="getWallet('<?= $user_id; ?>')">
   <div id="db-wrapper">
     <!-- navbar vertical -->
     <?php include "component/navbar-vertical.php"; ?>
@@ -37,11 +37,8 @@ if (isset($_SESSION['user_id'])) {
             <div>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="mb-2 mb-lg-0">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Pilih Dompet</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                  <select class="form-select" id="wallet-select" name="wallet_select"
+                    aria-label="Default select example">
                   </select>
                 </div>
                 <div>
@@ -60,7 +57,7 @@ if (isset($_SESSION['user_id'])) {
                 <div class="d-flex justify-content-between align-items-center
                     mb-3">
                   <div>
-                    <h4 class="mb-0" id="text-dompet">Seluruh Dompet</h4>
+                    <h4 class="mb-0" id="text-dompet">Saldo Dompet</h4>
                   </div>
                   <div class="icon-shape icon-md bg-light-primary text-primary
                       rounded-2">
@@ -69,8 +66,10 @@ if (isset($_SESSION['user_id'])) {
                 </div>
                 <!-- project number -->
                 <div>
-                  <h1 class="fw-bold" id="total-pengeluaran">3.200.000</h1>
-                  <p class="mb-0"><span class="text-dark me-2" id="total-transaksi-pengeluaran">28</span>Transaksi</p>
+                  <h1 class="fw-bold" id="total-saldo-dompet"></h1>
+                  <p class="mb-0">
+                    <span class="text-dark me-2" id="total-transaksi-dompet"></span>Transaksi
+                  </p>
                 </div>
               </div>
             </div>
@@ -85,7 +84,7 @@ if (isset($_SESSION['user_id'])) {
                   <div class="row">
                     <div class="col-md-12">
                       <div>
-                        <canvas id="myChart"></canvas>
+                        <canvas id="myChartAnalisa"></canvas>
                       </div>
                     </div>
                   </div>
@@ -278,20 +277,23 @@ if (isset($_SESSION['user_id'])) {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Nama Dompet</label>
-              <input type="text" class="form-control" name="name_wallet" id="name-wallet"
-                placeholder="Masukkan Nama Wallet" required>
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Nominal</label>
-              <input type="text" class="form-control" name="value_wallet" id="value-wallet"
-                placeholder="Masukkan Nominal Wallet" required>
-            </div>
+            <form id="form-input-wallet">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nama Dompet</label>
+                <input type="text" class="form-control" name="name_wallet" id="name-wallet"
+                  placeholder="Masukkan Nama Wallet" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nominal</label>
+                <input type="text" class="form-control" name="value_wallet" id="value-wallet"
+                  placeholder="Masukkan Nominal Wallet" required>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-            <button type="button" class="btn btn-primary" id="btn-save-wallet">Simpan</button>
+            <button type="button" class="btn btn-primary" id="btn-save-wallet"
+              onclick="saveWallet('<?= $user_id; ?>')">Simpan</button>
           </div>
         </div>
       </div>
@@ -301,29 +303,6 @@ if (isset($_SESSION['user_id'])) {
 
     <!-- Scripts -->
     <?php include "component/js.php"; ?>
-
-    <script>
-    const ctx = document.getElementById('myChart');
-
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-    </script>
 
 </body>
 
