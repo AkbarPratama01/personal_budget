@@ -1,4 +1,7 @@
 {
+  "name": "MyVendor/personalBudget",
+  "description": "my personal budget for testing",
+  "license": "MIT",
   "require": {
     "monolog/monolog": "^1.0",
     "twbs/bootstrap": "^5.0",
