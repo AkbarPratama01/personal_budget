@@ -19,28 +19,19 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '956385a4ee802cf3563d45822062fd24af16207c',
-    'name' => '__root__',
+    'reference' => '5de3f66625f08a46c8d1db7c360fddef1a9a3839',
+    'name' => 'myvendor/personalbudget',
   ),
   'versions' => 
   array (
-    '__root__' => 
-    array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '956385a4ee802cf3563d45822062fd24af16207c',
-    ),
     'components/jquery' => 
     array (
-      'pretty_version' => '3.6.0',
-      'version' => '3.6.0.0',
+      'pretty_version' => 'v3.7.1',
+      'version' => '3.7.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6cf38ee1fd04b6adf8e7dda161283aa35be818c3',
+      'reference' => '8edc7785239bb8c2ad2b83302b856a1d61de60e7',
     ),
     'datatables/datatables' => 
     array (
@@ -78,6 +69,15 @@ private static $installed = array (
       ),
       'reference' => '904713c5929655dc9b97288b69cfeedad610c9a1',
     ),
+    'myvendor/personalbudget' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5de3f66625f08a46c8d1db7c360fddef1a9a3839',
+    ),
     'psr/log' => 
     array (
       'pretty_version' => '1.1.4',
@@ -105,27 +105,27 @@ private static $installed = array (
     ),
     'twbs/bootstrap' => 
     array (
-      'pretty_version' => 'v5.3.0',
-      'version' => '5.3.0.0',
+      'pretty_version' => 'v5.3.2',
+      'version' => '5.3.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '60098ac499d30aa50575b0b7137391c06ef25429',
+      'reference' => '344e912d04b5b6a04482113eff20ab416ff01048',
     ),
     'twbs/bootstrap-icons' => 
     array (
-      'pretty_version' => 'v1.10.5',
-      'version' => '1.10.5.0',
+      'pretty_version' => 'v1.11.2',
+      'version' => '1.11.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '648aa8238437d9da9227f6273cc163ec5841382d',
+      'reference' => '108565f11f099f177b31929e3eafc2c8d497fcd1',
     ),
     'twitter/bootstrap' => 
     array (
       'replaced' => 
       array (
-        0 => 'v5.3.0',
+        0 => 'v5.3.2',
       ),
     ),
   ),
