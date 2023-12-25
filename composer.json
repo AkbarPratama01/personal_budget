@@ -1,5 +1,5 @@
 {
-  "name": "MyVendor/personalBudget",
+  "name": "myvendor/personalbudget",
   "description": "my personal budget for testing",
   "license": "MIT",
   "require": {
